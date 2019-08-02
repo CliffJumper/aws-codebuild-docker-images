@@ -4,4 +4,5 @@ steps:
   - name: 'gcr.io/cloud-builders/docker'
     args: ["build", "-t", "aws/codebuild/standard:2.0", "."]
     dir: "ubuntu/standard/2.0"
-    timeout: 1800s
+    timeout: 30m0s
+timeout: 40m0s
