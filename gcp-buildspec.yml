@@ -1,0 +1,8 @@
+steps:
+  - name: git
+    args: ["clone", "https://github.com/CliffJumper/aws-codebuild-docker-images.git"]
+  - name: git
+    args: ["checkout", "1.11.0" ]
+  - name: docker
+    args: ["build", "-t", "aws/codebuild/standard:2.0", "."]
+    dir: "ubuntu/standard/2.0"
