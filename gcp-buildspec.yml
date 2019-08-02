@@ -1,8 +1,8 @@
 steps:
-  - name: git
+  - name: 'gcr.io/cloud-builders/git'
     args: ["clone", "https://github.com/CliffJumper/aws-codebuild-docker-images.git"]
-  - name: git
+  - name: 'gcr.io/cloud-builders/git'
     args: ["checkout", "1.11.0" ]
-  - name: docker
+  - name: 'gcr.io/cloud-builders/docker'
     args: ["build", "-t", "aws/codebuild/standard:2.0", "."]
     dir: "ubuntu/standard/2.0"
